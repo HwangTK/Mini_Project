@@ -4165,7 +4165,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477417978}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 21c522746d909ed4d982cf2150fb7933, type: 3}
   m_Controller: {fileID: 9100000, guid: ba0eb2162948faf448c2d3aaa48f00a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -4190,7 +4190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1477417979}
-  _speed: 5
+  _speed: 3
   _rollSpeed: 10
   _rollTime: 0.3
   _animator: {fileID: 1477417980}

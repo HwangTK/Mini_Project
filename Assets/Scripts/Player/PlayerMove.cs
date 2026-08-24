@@ -7,8 +7,11 @@ public class PlayerMove : MonoBehaviour
     [Header("플레이어")]
     [SerializeField] private Transform _player;
 
+    [Header("카메라")]
+    [SerializeField] private Camera _camera;
+
     [Header("이동속도")]
-    [SerializeField] private float _speed = 5f;
+    [SerializeField] private float _speed = 3f;
 
     [Header("구르기 거리")]
     [SerializeField] private float _rollSpeed = 10f;
@@ -35,6 +38,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         Move();
+        LookMouse();
     }
 
 
@@ -53,7 +57,7 @@ public class PlayerMove : MonoBehaviour
         {
             _animator.SetFloat("Speed", 0f);
         }
-        else if(_speed < 15f)
+        else if(_speed < 8f)
         {
             _animator.SetFloat("Speed", 0.5f);
         }
@@ -97,6 +101,30 @@ public class PlayerMove : MonoBehaviour
             _isrolling = true;
 
         }
+
+
+
+    }
+
+
+
+    private void LookMouse()
+    {
+        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+
+        if(Physics.Raycast(ray, out RaycastHit hit))
+        {
+            Vector3 lookDir = hit.point - _player.position;
+            lookDir.y = 0f;
+
+            if(lookDir != Vector3.zero)
+            {
+                _player.rotation = Quaternion.LookRotation(lookDir);
+            }
+
+
+        }
+
 
 
 
