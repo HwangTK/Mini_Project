@@ -15,7 +15,7 @@ public class Camera_Quater : MonoBehaviour
 
     private float sharpness = 5f;
     private float lookHeight = 2f;
-    private Vector3 quarterOffset = new Vector3(0.5f, 8f, -3f);
+    private Vector3 quarterOffset = new Vector3(0f, 8f, -3f);
     private Transform _camTr;
     private bool snap = true;
 
