@@ -4190,6 +4190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1477417979}
+  _camera: {fileID: 963194227}
   _speed: 3
   _rollSpeed: 10
   _rollTime: 0.3

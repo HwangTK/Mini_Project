@@ -96,7 +96,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             Debug.Log("±¸¸£±â");
-
+            _animator.SetTrigger("Roll");
             _timer = 0f;
             _isrolling = true;
 
