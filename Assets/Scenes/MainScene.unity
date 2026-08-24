@@ -4141,6 +4141,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 21c522746d909ed4d982cf2150fb7933, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1477417982}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 21c522746d909ed4d982cf2150fb7933, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1477417981}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 21c522746d909ed4d982cf2150fb7933, type: 3}
       insertIndex: -1
@@ -4195,6 +4198,19 @@ MonoBehaviour:
   _rollSpeed: 10
   _rollTime: 0.3
   _animator: {fileID: 1477417980}
+--- !u!114 &1477417982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477417978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36467fad439859149b9e7135f3d88021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentWeapon: {fileID: 0}
 --- !u!1001 &1484778223
 PrefabInstance:
   m_ObjectHideFlags: 0
