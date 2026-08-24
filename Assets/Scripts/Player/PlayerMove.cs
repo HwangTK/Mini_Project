@@ -16,6 +16,10 @@ public class PlayerMove : MonoBehaviour
     [Header("구르기 시간")]
     [SerializeField] private float _rollTime = 0.3f;
 
+    [Header("캐릭터 애니메이션")]
+    [SerializeField] private Animator _animator;
+
+
 
     private bool _isrolling = false;
     private float _timer;
@@ -45,6 +49,29 @@ public class PlayerMove : MonoBehaviour
         transform.position += dir * _speed * Time.deltaTime;
 
 
+        if(move.magnitude == 0)
+        {
+            _animator.SetFloat("Speed", 0f);
+        }
+        else if(_speed < 15f)
+        {
+            _animator.SetFloat("Speed", 0.5f);
+        }
+        else
+        {
+            _animator.SetFloat("Speed", 1.0f);
+        }
+
+
+
+
+
+
+
+
+
+
+
         if (_isrolling)
         {
             _timer += Time.deltaTime;
@@ -55,7 +82,7 @@ public class PlayerMove : MonoBehaviour
 
             _player.position += dir * _rolling * Time.deltaTime;
 
-            if(_timer >= _rollTime)
+            if (_timer >= _rollTime)
             {
                 _isrolling = false;
             }
