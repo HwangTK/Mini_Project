@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] WeaponBase _currentWeapon;
-
+    [SerializeField] private WeaponBase _currentWeapon;
+    [SerializeField] private PlayerMove _playerMove;
     
 
 
@@ -24,7 +24,14 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (_playerMove.IsRolling)
+        {
+            return;
+        }
+
+
+
+        if(Input.GetMouseButton(0))
         {
            
 

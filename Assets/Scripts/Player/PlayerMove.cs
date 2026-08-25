@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _rollSpeed = 10f;
 
     [Header("구르기 시간")]
-    [SerializeField] private float _rollTime = 0.3f;
+    [SerializeField] private float _rollTime = 0.8f;
 
     [Header("캐릭터 애니메이션")]
     [SerializeField] private Animator _animator;
@@ -27,6 +27,12 @@ public class PlayerMove : MonoBehaviour
     private bool _isrolling = false;
     private float _timer;
     
+
+    public bool IsRolling
+    {
+        get { return _isrolling; }
+    }
+
 
     void Start()
     {
@@ -93,7 +99,7 @@ public class PlayerMove : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !_isrolling)
         {
             Debug.Log("구르기");
             _animator.SetTrigger("Roll");
