@@ -36,7 +36,7 @@ public class PlayerAttack : MonoBehaviour
            
 
             _currentWeapon.Attack();
-            Debug.Log("АјАн");
+            
                 
         }
     }

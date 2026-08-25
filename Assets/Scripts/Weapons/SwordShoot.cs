@@ -28,4 +28,25 @@ public class SwordShoot : MonoBehaviour
     {
         transform.position += _direction * _speed * Time.deltaTime;
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("충돌");
+        if (other.CompareTag("Monster"))
+        {
+            Debug.Log("피격");
+
+            MonsterHealth monsterHealth = other.GetComponent<MonsterHealth>();
+
+            if(monsterHealth != null )
+            {
+                monsterHealth.MonsterHit(50);
+            }
+
+            Destroy(gameObject);
+        }
+    }
+
+
 }
