@@ -6,6 +6,7 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] WeaponBase _currentWeapon;
 
+    
 
 
     void Start()
@@ -25,8 +26,13 @@ public class PlayerAttack : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
+           
+
+            _currentWeapon.Attack();
             Debug.Log("АјАн");
+                
         }
     }
+
 
 }
