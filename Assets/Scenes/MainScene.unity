@@ -6493,6 +6493,10 @@ PrefabInstance:
       propertyPath: _wall.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 7069733652606998060, guid: 7d32ce7531433ec4fa60a17eff3d6fc1, type: 3}
+      propertyPath: _attackCooldown
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

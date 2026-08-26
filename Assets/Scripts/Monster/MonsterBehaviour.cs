@@ -15,6 +15,12 @@ public class MonsterBehaviour : MonoBehaviour
     [Header("애니메이터")]
     [SerializeField] private Animator _animator;
 
+    [Header("공격 쿨타임")]
+    [SerializeField] private float _attackCooldown = 3.0f;
+
+    private float _attackTimer = 0f;
+
+
 
     private float _speed = 1f;
 
@@ -44,6 +50,19 @@ public class MonsterBehaviour : MonoBehaviour
 
     void Update()
     {
+        if (_attackTimer > 0f)
+        {
+            _attackTimer -= Time.deltaTime;
+        }
+        else
+        {
+            _attackTimer = 0f;
+            _animator.SetBool("isCoolDown", false);
+        }
+
+
+
+
         if (!_isAttack)
         {
             ChangeState();
@@ -67,7 +86,8 @@ public class MonsterBehaviour : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, _player.position);
 
-        if(distance < 2f)
+
+        if (distance < 2f)
         {
             _state = MonsterState.Attack;
         }
@@ -127,6 +147,8 @@ public class MonsterBehaviour : MonoBehaviour
 
     private void MonsterChase()
     {
+        _animator.SetBool("isMove", true);
+
         Vector3 targetDir = (_player.position - transform.position).normalized;
         Quaternion targetRot = Quaternion.LookRotation(targetDir);
 
@@ -144,6 +166,18 @@ public class MonsterBehaviour : MonoBehaviour
             return;
         }
 
+        if(_attackTimer > 0f)
+        {
+            Vector3 targetDir = (_player.position - transform.position).normalized;
+            Quaternion targetRot = Quaternion.LookRotation(targetDir);
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, 270f * Time.deltaTime);
+
+
+            return;
+        }
+
+
         _isAttack = true;
 
         _animator.SetTrigger("Attack");
@@ -152,9 +186,12 @@ public class MonsterBehaviour : MonoBehaviour
     }
 
 
-    private void AttackEnd()
+    public void AttackEnd()
     {
         _isAttack = false;
+        _attackTimer = _attackCooldown;
+
+        _animator.SetBool("isCoolDown", true);
     }
 
 }
