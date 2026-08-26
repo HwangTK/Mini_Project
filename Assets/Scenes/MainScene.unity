@@ -4323,7 +4323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21c522746d909ed4d982cf2150fb7933, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.707567
+      value: -19.61
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21c522746d909ed4d982cf2150fb7933, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6408,6 +6408,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c3e9e64ea3420884ca5ed70789bdfe0c, type: 3}
   m_PrefabInstance: {fileID: 1674121162}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &95380086371469763 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5969310159061086518, guid: 7d32ce7531433ec4fa60a17eff3d6fc1, type: 3}
+  m_PrefabInstance: {fileID: 144257331342695384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &144257331342695384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6468,10 +6473,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5969310159061086518, guid: 7d32ce7531433ec4fa60a17eff3d6fc1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4e73408344fe42441a1fd15c1f24fe4e, type: 2}
     - target: {fileID: 6424061436720328229, guid: 7d32ce7531433ec4fa60a17eff3d6fc1, type: 3}
       propertyPath: m_Name
       value: Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 7069733652606998060, guid: 7d32ce7531433ec4fa60a17eff3d6fc1, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1477417979}
+    - target: {fileID: 7069733652606998060, guid: 7d32ce7531433ec4fa60a17eff3d6fc1, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 95380086371469763}
     - target: {fileID: 7069733652606998060, guid: 7d32ce7531433ec4fa60a17eff3d6fc1, type: 3}
       propertyPath: _wall.m_Bits
       value: 64
