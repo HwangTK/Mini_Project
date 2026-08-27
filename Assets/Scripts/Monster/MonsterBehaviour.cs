@@ -15,8 +15,16 @@ public class MonsterBehaviour : MonoBehaviour
     [Header("애니메이터")]
     [SerializeField] private Animator _animator;
 
+
+    [Header("공격 대미지")]
+    [SerializeField] private float _damage = 10;
+
     [Header("공격 쿨타임")]
     [SerializeField] private float _attackCooldown = 3.0f;
+
+
+    [Header("공격하는 주먹")]
+    [SerializeField] private Transform _attackPoint;
 
     private float _attackTimer = 0f;
 
@@ -89,14 +97,17 @@ public class MonsterBehaviour : MonoBehaviour
 
         if (distance < 2f)
         {
+            _animator.SetBool("isMove", false);
             _state = MonsterState.Attack;
         }
         else if(distance < 5f)
         {
+            _animator.SetBool("isMove", true);
             _state = MonsterState.Chase;
         }
         else
         {
+            _animator.SetBool("isMove", true);
             _state = MonsterState.Walk;
         }
 
@@ -147,8 +158,7 @@ public class MonsterBehaviour : MonoBehaviour
 
     private void MonsterChase()
     {
-        _animator.SetBool("isMove", true);
-
+        
         Vector3 targetDir = (_player.position - transform.position).normalized;
         Quaternion targetRot = Quaternion.LookRotation(targetDir);
 
@@ -161,6 +171,7 @@ public class MonsterBehaviour : MonoBehaviour
 
     private void MonsterAttack()
     {
+        
         if (_isAttack)
         {
             return;
@@ -194,4 +205,49 @@ public class MonsterBehaviour : MonoBehaviour
         _animator.SetBool("isCoolDown", true);
     }
 
+
+
+    public void AttackHit()
+    {
+        
+        Vector3 bottom = _attackPoint.position + Vector3.up * 0.2f;
+        Vector3 top = _attackPoint.position + Vector3.up * 0.4f;
+
+        Collider[] hits = Physics.OverlapCapsule(bottom, top, 1.5f);
+
+        foreach (Collider hit in hits)
+        {
+            if (hit.CompareTag("Player"))
+            {
+                PlayerHealth playerHealth = hit.GetComponent<PlayerHealth>();
+                Debug.Log("쳐맞음");
+
+                if (playerHealth != null)
+                {
+                    playerHealth.PlayerHit(_damage);
+                }
+            }
+        }
+    }
+
+
+    private void OnDrawGizmosSelected()
+    {
+        if (_attackPoint == null)
+        {
+            return;
+        }
+
+        Vector3 attackPos = _attackPoint.position;
+
+        Vector3 bottom = attackPos + Vector3.up * 0.2f;
+        Vector3 top = attackPos + Vector3.up * 0.4f;
+
+        Gizmos.DrawWireSphere(bottom, 0.5f);
+        Gizmos.DrawWireSphere(top, 0.5f);
+    }
+
+
 }
+
+
