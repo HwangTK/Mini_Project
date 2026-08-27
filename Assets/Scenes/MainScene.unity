@@ -6526,6 +6526,14 @@ PrefabInstance:
       propertyPath: _monsterBehaviour
       value: 
       objectReference: {fileID: 95380086371469766}
+    - target: {fileID: 127159478958563011, guid: 7d32ce7531433ec4fa60a17eff3d6fc1, type: 3}
+      propertyPath: _dropItems.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 127159478958563011, guid: 7d32ce7531433ec4fa60a17eff3d6fc1, type: 3}
+      propertyPath: _dropItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 2099083493459007967, guid: 185081b34a0fb5c4a9256bb1b026346e, type: 3}
     - target: {fileID: 2993935233840784713, guid: 7d32ce7531433ec4fa60a17eff3d6fc1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.52624

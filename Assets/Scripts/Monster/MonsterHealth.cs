@@ -16,6 +16,14 @@ public class MonsterHealth : MonoBehaviour
     [Header("깜빡거리는 시간")]
     [SerializeField] private float _hitTime = 0.2f;
 
+    [Header("드랍 아이템")]
+    [SerializeField] private GameObject[] _dropItems;
+
+    [Header("드랍 확률")]
+    [SerializeField] private float _dropPercent = 0.5f;
+
+
+
     private Color _originColor;
 
     [SerializeField] private Animator _animator;
@@ -46,6 +54,11 @@ public class MonsterHealth : MonoBehaviour
 
         if ( _hp <= 0)
         {
+            if (Random.value <= _dropPercent)
+            {
+                Instantiate(_dropItems[0], transform.position, transform.rotation);
+            }
+
             Destroy(gameObject);
         }
 
