@@ -33,7 +33,7 @@ public class Camera_Quater : MonoBehaviour
         }
 
         _camTr = _camera.transform;
-
+        InitQuarter();
 
     }
 
