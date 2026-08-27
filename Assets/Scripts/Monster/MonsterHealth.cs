@@ -18,6 +18,10 @@ public class MonsterHealth : MonoBehaviour
 
     private Color _originColor;
 
+    [SerializeField] private Animator _animator;
+    [SerializeField] private MonsterBehaviour _monsterBehaviour;
+
+
 
     private void Start()
     {
@@ -32,6 +36,13 @@ public class MonsterHealth : MonoBehaviour
         _hp -= damage;
 
         StartCoroutine(HitEffect());
+
+        if (!_monsterBehaviour.IsAttacking)
+        {
+            _monsterBehaviour.HitStart();
+            _animator.SetTrigger("Hit");
+        }
+
 
         if ( _hp <= 0)
         {

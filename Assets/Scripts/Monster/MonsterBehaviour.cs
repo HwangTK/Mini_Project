@@ -37,6 +37,15 @@ public class MonsterBehaviour : MonoBehaviour
     private Vector3 _dir;
 
     private bool _isAttack = false;
+    private bool _isHit = false;
+
+    public bool IsAttacking
+    {
+        get { return _isAttack; }
+    }
+
+
+
 
     public enum MonsterState
     {
@@ -68,6 +77,10 @@ public class MonsterBehaviour : MonoBehaviour
             _animator.SetBool("isCoolDown", false);
         }
 
+        if (_isHit)
+        {
+            return;
+        }
 
 
 
@@ -247,6 +260,17 @@ public class MonsterBehaviour : MonoBehaviour
         Gizmos.DrawWireSphere(top, 0.5f);
     }
 
+
+    public void HitStart() 
+    {
+        _isHit = true;
+    }
+
+
+    public void HitEnd()
+    {
+        _isHit = false;
+    }
 
 }
 
