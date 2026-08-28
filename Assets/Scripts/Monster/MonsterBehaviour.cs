@@ -17,7 +17,7 @@ public class MonsterBehaviour : MonoBehaviour
 
 
     [Header("공격 대미지")]
-    [SerializeField] private float _damage = 10;
+    [SerializeField] private int _damage = 10;
 
     [Header("공격 쿨타임")]
     [SerializeField] private float _attackCooldown = 3.0f;

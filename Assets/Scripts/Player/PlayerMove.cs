@@ -14,7 +14,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _speed = 3f;
 
     [Header("구르기 거리")]
-    [SerializeField] private float _rollSpeed = 10f;
+    [SerializeField] private float _rollDistance = 0.3f;
 
     [Header("구르기 시간")]
     [SerializeField] private float _rollTime = 0.8f;
@@ -22,16 +22,29 @@ public class PlayerMove : MonoBehaviour
     [Header("캐릭터 애니메이션")]
     [SerializeField] private Animator _animator;
 
+    [Header("플레이어마나 스크립트")]
+    [SerializeField] private PlayerMana _playerMana;
+
+    [Header("구르기 마나소모량")]
+    [SerializeField] private int _rollMana = 10;
 
 
     private bool _isrolling = false;
     private float _timer;
-    
+    private Vector3 _rollDir;
+    private Vector3 _rollStartPos;
 
     public bool IsRolling
     {
         get { return _isrolling; }
     }
+
+    public bool IsMoving 
+    { 
+        get; private set; 
+    }
+
+
 
 
     void Start()
@@ -56,8 +69,12 @@ public class PlayerMove : MonoBehaviour
         Vector3 move = new Vector3(h, 0f, v);
         Vector3 dir = move.normalized;
 
-        transform.position += dir * _speed * Time.deltaTime;
+        IsMoving = move.magnitude > 0;
 
+        if (!_isrolling)
+        {
+            transform.position += dir * _speed * Time.deltaTime;
+        }
 
         if(move.magnitude == 0)
         {
@@ -88,9 +105,9 @@ public class PlayerMove : MonoBehaviour
 
             float t = _timer / _rollTime;
 
-            float _rolling = Mathf.Lerp(_rollSpeed, 2f, t);
+            Vector3 targetPos = _rollStartPos + _rollDir * _rollDistance;
 
-            _player.position += dir * _rolling * Time.deltaTime;
+            _player.position = Vector3.Lerp(_rollStartPos, targetPos, t);
 
             if (_timer >= _rollTime)
             {
@@ -101,7 +118,16 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && !_isrolling)
         {
+            if (!_playerMana.UseMana(_rollMana))
+            {
+                return;
+            }
+
+
             Debug.Log("구르기");
+            _rollDir = dir;
+            _rollStartPos = _player.position;
+
             _animator.SetTrigger("Roll");
             _timer = 0f;
             _isrolling = true;

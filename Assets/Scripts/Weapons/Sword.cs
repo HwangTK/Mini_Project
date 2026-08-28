@@ -15,6 +15,8 @@ public class Sword : WeaponBase
 
     [SerializeField] private float _attackDelay = 1.0f;
 
+    [SerializeField] private PlayerMove _playerMove;
+
     private float _attackTimer;
 
 
@@ -36,9 +38,16 @@ public class Sword : WeaponBase
 
         _attackTimer = _attackDelay;
 
-        _animator.SetTrigger("Sword");
+        if (_playerMove.IsMoving)
+        {
+            _animator.SetTrigger("SwordUpper");
+        }
+        else
+        {
+            _animator.SetTrigger("SwordFull");
+        }
 
-        
+
 
 
         Quaternion slashRot = _firePoint.rotation * Quaternion.Euler(0f, 90f, 0f);
