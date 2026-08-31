@@ -20,7 +20,7 @@ public class MonsterHealth : MonoBehaviour
     [SerializeField] private GameObject[] _dropItems;
 
     [Header("µå¶ø È®·ü")]
-    [SerializeField] private float _dropPercent = 0.5f;
+    [SerializeField] private float _dropPercent = 1.0f;
 
 
 

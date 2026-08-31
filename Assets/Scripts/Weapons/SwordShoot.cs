@@ -7,6 +7,8 @@ public class SwordShoot : MonoBehaviour
     [Header("투사체 속도")]
     [SerializeField] private float _speed = 10.0f;
 
+    [Header("대미지")]
+    [SerializeField] private int _damage = 50;
    
 
     private float _destroy = 1.0f;
@@ -41,7 +43,7 @@ public class SwordShoot : MonoBehaviour
 
             if(monsterHealth != null )
             {
-                monsterHealth.MonsterHit(50);
+                monsterHealth.MonsterHit(_damage);
             }
 
             Destroy(gameObject);
