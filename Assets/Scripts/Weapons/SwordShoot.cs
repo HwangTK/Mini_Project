@@ -51,4 +51,9 @@ public class SwordShoot : MonoBehaviour
     }
 
 
+    public void SetDamage(int damage)
+    {
+        _damage = damage;
+    }
+
 }

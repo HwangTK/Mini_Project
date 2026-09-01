@@ -31,9 +31,9 @@ public class InventorySlot : MonoBehaviour
     {
         if (_itemData != null)
         {
-            Debug.Log(_itemData.itemName);
+            RectTransform slotRect = GetComponent<RectTransform>();
 
-            _itemInfoUI.SetItemInfo(_itemData);
+            _itemInfoUI.OpenMenu(_itemData, slotRect);
         }
     }
 

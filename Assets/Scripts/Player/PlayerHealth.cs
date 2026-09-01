@@ -44,4 +44,14 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
+    public void AddMaxHp(int amount)
+    {
+        _maxHp += amount;
+        _playerHP += amount;
+
+        _hpSlider.maxValue = _maxHp;
+        _hpSlider.value = _playerHP;
+        _hpText.text = _playerHP + " / " + _maxHp;
+    }
+
 }

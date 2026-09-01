@@ -24,6 +24,8 @@ public class InventoryUI : MonoBehaviour
 
             slot.SetItemInfoUI(_itemInfoUI);
         }
+
+        _inventoryPanel.SetActive(false);
     }
 
     void Update()
@@ -43,7 +45,7 @@ public class InventoryUI : MonoBehaviour
 
 
 
-    private void RefreshInventory()
+    public void RefreshInventory()
     {
         for (int i = 0; i < _slots.Count; i++)
         {

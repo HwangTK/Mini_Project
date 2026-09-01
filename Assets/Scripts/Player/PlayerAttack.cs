@@ -6,12 +6,12 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private WeaponBase _currentWeapon;
     [SerializeField] private PlayerMove _playerMove;
-    
 
+    [SerializeField] private int _damage = 50;
 
-    void Start()
+    public int Damage
     {
-        
+        get { return _damage; }
     }
 
 
@@ -40,6 +40,13 @@ public class PlayerAttack : MonoBehaviour
                 
         }
     }
+
+    public void AddDamage(int damage)
+    {
+        _damage += damage;
+        Debug.Log("현재 공격력 : " + _damage);
+    }
+
 
 
 }

@@ -17,6 +17,9 @@ public class Sword : WeaponBase
 
     [SerializeField] private PlayerMove _playerMove;
 
+    [SerializeField] private PlayerAttack _playerAttack;
+
+
     private float _attackTimer;
 
 
@@ -58,8 +61,9 @@ public class Sword : WeaponBase
 
         swordshoot.SetDirection(_firePoint.forward);
 
-            
-        
+        swordshoot.SetDamage(_playerAttack.Damage);
+
+
     }
 
 

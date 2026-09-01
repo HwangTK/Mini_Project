@@ -12,4 +12,19 @@ public class ItemData : ScriptableObject
     public string description;
 
 
+    public int healthUp;
+    public int manaUp;
+    public int manaRegenUp;
+
+    public int attackUp;
+
+    public float attackDelayDecrease;
+    public float moveSpeedUp;
+
+
+
+
+
+
+
 }
