@@ -12,6 +12,10 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private ItemInfoUI _itemInfoUI;
     [SerializeField] private ScrollRect _scrollRect;
 
+    [SerializeField] private GameObject _craftPanel;
+
+
+
     private List<InventorySlot> _slots = new List<InventorySlot>();
 
 
@@ -26,6 +30,7 @@ public class InventoryUI : MonoBehaviour
         }
 
         _inventoryPanel.SetActive(false);
+        _craftPanel.SetActive(false);
     }
 
     void Update()
@@ -40,6 +45,16 @@ public class InventoryUI : MonoBehaviour
                 _scrollRect.verticalNormalizedPosition = 1f;
             }
         }
+
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+
+            _craftPanel.SetActive(!_craftPanel.activeSelf);
+
+
+        }
+
     }
 
 

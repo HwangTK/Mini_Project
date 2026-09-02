@@ -26,6 +26,12 @@ public class ItemInfoUI : MonoBehaviour
     [Header("인벤토리UI")]
     [SerializeField] private InventoryUI _inventoryUI;
 
+    [Header("제작 슬롯")]
+    [SerializeField] private CraftSlot[] _craftSlots;
+
+    [Header("제작패널")]
+    [SerializeField] private GameObject _craftPanel;
+
 
 
     private ItemData _selectedItem;
@@ -92,10 +98,52 @@ public class ItemInfoUI : MonoBehaviour
     }
 
 
+    public void EraseItem()
+    {
+        if (_selectedItem == null)
+        {
+            return;
+        }
+
+        _inventory.RemoveItem(_selectedItem);
+
+        _selectedItem = null;
+        _itemButtonPanel.SetActive(false);
+        _itemDetailPanel.SetActive(false);
+
+        _inventoryUI.RefreshInventory();
+    }
+
+
+
 
     public void CloseButtonPanel()
     {
         _itemButtonPanel.SetActive(false);
     }
+
+
+    public void AddCraftItem()
+    {
+        if (_selectedItem == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < _craftSlots.Length; i++)
+        {
+            if (_craftSlots[i].IsEmpty)
+            {
+                _craftSlots[i].SetItem(_selectedItem);
+                _inventory.RemoveItem(_selectedItem);
+                _inventoryUI.RefreshInventory();
+                break;
+            }
+        }
+
+        _itemButtonPanel.SetActive(false);
+        _craftPanel.SetActive(true);
+    }
+
 
 }
