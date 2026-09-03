@@ -16,7 +16,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 77a5a6c58088483479c0b62b0ef960d7, type: 3}
   description: "\uAC00\uC131\uBE44\uAC00 \uC88B\uC740 \uBE14\uB80C\uB514\uB4DC \uC704\uC2A4\n\uC2A4\uBAA8\uD0A4,
     \uBC14\uB2D0\uB77C, \uACFC\uC77C\uB4F1\uC758 \uD5A5\uC774 \uBCF5\uD569\uC801\uC73C\uB85C
-    \uC874\uC7AC\uD568"
+    \uC874\uC7AC\uD568\n\n\uCCB4\uB825 + 10"
   healthUp: 10
   manaUp: 0
   manaRegenUp: 0
