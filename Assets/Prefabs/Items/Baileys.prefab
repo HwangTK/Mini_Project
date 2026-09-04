@@ -66,10 +66,55 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 00f16d747bf7b3340b62af744b599ed0, type: 2}
     - target: {fileID: 919132149155446097, guid: e0d0c310ae0617e45a42f823fef7ade0, type: 3}
       propertyPath: m_Name
-      value: "Meshy_AI_Baileys_Espresso_Cr\xE8_0903072226_texture"
+      value: Baileys
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e0d0c310ae0617e45a42f823fef7ade0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6160748300741880506}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e0d0c310ae0617e45a42f823fef7ade0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -737874151530936157}
   m_SourcePrefab: {fileID: 100100000, guid: e0d0c310ae0617e45a42f823fef7ade0, type: 3}
+--- !u!1 &8882974479088218818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e0d0c310ae0617e45a42f823fef7ade0, type: 3}
+  m_PrefabInstance: {fileID: 8613068215228354451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6160748300741880506
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882974479088218818}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0059018624, y: 0.0059260367, z: 0.01902468}
+  m_Center: {x: 0.0000019898878, y: -0.000006524962, z: -0.0000069248495}
+--- !u!114 &-737874151530936157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882974479088218818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65cac195ef6fbb4396026bfead94a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemData: {fileID: 11400000, guid: 312771f700670ce418f17c1872cb8404, type: 2}

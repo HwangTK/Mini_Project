@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a008b30155e27846b0acf9652f8b35a, type: 3}
+  m_Name: GodMotherRecipe
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 11400000, guid: 3e69e074e7504124b9bb7fa1b3900231, type: 2}
+  - {fileID: 11400000, guid: 5f95b3ffa980086478084b4560a9e195, type: 2}
+  resultItem: {fileID: 11400000, guid: 2e85aedb0b952a644b9ed1a162efd864, type: 2}

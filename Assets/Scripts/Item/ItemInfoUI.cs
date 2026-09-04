@@ -18,7 +18,10 @@ public class ItemInfoUI : MonoBehaviour
     [Header("플레이어 스탯들")]
     [SerializeField] private PlayerAttack _playerAttack;
     [SerializeField] private PlayerHealth _playerHealth;
-    
+    [SerializeField] private PlayerMana _playerMana;
+    [SerializeField] private Sword _sword;
+    [SerializeField] private PlayerMove _playerMove;
+
 
     [Header("인벤토리")]
     [SerializeField] private Inventory _inventory;
@@ -89,7 +92,15 @@ public class ItemInfoUI : MonoBehaviour
         }
 
         _playerAttack.AddDamage(_selectedItem.attackUp);
+        _playerHealth.AddMaxHp(_selectedItem.healthUp);
+        _playerMana.AddMaxMana(_selectedItem.manaUp);
+        _playerMana.AddManaRegen(_selectedItem.manaRegenUp);
+        _sword.DecreaseAttackDelay(_selectedItem.attackDelayDecrease);
+        _playerMove.AddMoveSpeed(_selectedItem.moveSpeedUp);
+        _playerHealth.AddHealthRegen(_selectedItem.healthRegenUp);
+        _playerHealth.AddHealthRegenTime(_selectedItem.healthRegenTimer);
         _inventory.RemoveItem(_selectedItem);
+
 
         _selectedItem = null;
         _itemButtonPanel.SetActive(false);

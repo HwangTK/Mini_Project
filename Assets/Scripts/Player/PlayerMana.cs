@@ -84,4 +84,21 @@ public class PlayerMana : MonoBehaviour
     }
 
 
+    public void AddMaxMana(int amount)
+    {
+        _maxMp += amount;
+        _playerMp += amount;
+
+        _mpslider.maxValue = _maxMp;
+        _mpslider.value = _playerMp;
+        _mpText.text = _playerMp + " / " + _maxMp;
+    }
+
+
+    public void AddManaRegen(int amount)
+    {
+        _manaRegen += amount;
+    }
+
+
 }

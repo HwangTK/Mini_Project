@@ -56,6 +56,7 @@ public class CraftManager : MonoBehaviour
             {
                 Debug.Log("제작 성공");
                 _resultText.text = "제작 성공";
+                StartCoroutine(HideResultText());
 
                 _inventory.AddItem(recipe.resultItem);
 
@@ -73,9 +74,17 @@ public class CraftManager : MonoBehaviour
         
         Debug.Log("조합 실패");
         _resultText.text = "조합 실패";
+        StartCoroutine(HideResultText());
 
     }
 
 
 
+
+    private IEnumerator HideResultText()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        _resultText.text = "";
+    }
 }

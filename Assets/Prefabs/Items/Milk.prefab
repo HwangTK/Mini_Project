@@ -66,10 +66,55 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cde9bafb3e6c96d4885ae86981c81d65, type: 2}
     - target: {fileID: 919132149155446097, guid: 0997b432f79058f419acacf07bd638b7, type: 3}
       propertyPath: m_Name
-      value: Meshy_AI_Blue_Milk_Carton_Mock_0903071825_texture
+      value: Milk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0997b432f79058f419acacf07bd638b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8587354657674718394}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0997b432f79058f419acacf07bd638b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8265099609190011889}
   m_SourcePrefab: {fileID: 100100000, guid: 0997b432f79058f419acacf07bd638b7, type: 3}
+--- !u!1 &6723829985154939235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0997b432f79058f419acacf07bd638b7, type: 3}
+  m_PrefabInstance: {fileID: 5876843946227434546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &-8587354657674718394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723829985154939235}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0066035823, y: 0.006517627, z: 0.018975386}
+  m_Center: {x: 0.000005239972, y: 0.000005029256, z: 0.000015610365}
+--- !u!114 &-8265099609190011889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723829985154939235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65cac195ef6fbb4396026bfead94a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemData: {fileID: 11400000, guid: 5e597c935f5f3fd4f9be9d9061b23311, type: 2}

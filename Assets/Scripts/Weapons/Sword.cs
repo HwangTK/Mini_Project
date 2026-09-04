@@ -13,7 +13,7 @@ public class Sword : WeaponBase
     [Header("발사지점")]
     [SerializeField] private Transform _firePoint;
 
-    [SerializeField] private float _attackDelay = 1.0f;
+    [SerializeField] private float _attackDelay = 1.5f;
 
     [SerializeField] private PlayerMove _playerMove;
 
@@ -67,6 +67,9 @@ public class Sword : WeaponBase
     }
 
 
-
+    public void DecreaseAttackDelay(float amount)
+    {
+        _attackDelay -= amount;
+    }
 
 }

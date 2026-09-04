@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0824eff94a4c2cb4cb2e7ae11992be78, type: 3}
+  m_Name: WildTurkey
+  m_EditorClassIdentifier: 
+  itemName: WildTurkey
+  icon: {fileID: 21300000, guid: ad3eb39425fa1fa4d829831ac681b9b0, type: 3}
+  description: "\uC5ED\uC0AC\uAC00 \uC624\uB798\uB41C \uBC84\uBC88 \uC704\uC2A4\uD0A4\n\n\uACF5\uACA9\uC18D\uB3C4
+    + 0.05"
+  healthUp: 0
+  manaUp: 0
+  manaRegenUp: 0
+  healthRegenUp: 0
+  healthRegenTimer: 0
+  attackUp: 0
+  attackDelayDecrease: 0.05
+  moveSpeedUp: 0

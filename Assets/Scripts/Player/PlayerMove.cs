@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Camera _camera;
 
     [Header("이동속도")]
-    [SerializeField] private float _speed = 3f;
+    [SerializeField] private float _speed = 2.5f;
 
     [Header("구르기 거리")]
     [SerializeField] private float _rollDistance = 0.3f;
@@ -28,11 +28,16 @@ public class PlayerMove : MonoBehaviour
     [Header("구르기 마나소모량")]
     [SerializeField] private int _rollMana = 10;
 
+    [Header("플레이어 리지드바디")]
+    [SerializeField] private Rigidbody _rigidbody;
+
 
     private bool _isrolling = false;
     private float _timer;
     private Vector3 _rollDir;
     private Vector3 _rollStartPos;
+
+
 
     public bool IsRolling
     {
@@ -93,12 +98,6 @@ public class PlayerMove : MonoBehaviour
 
 
 
-
-
-
-
-
-
         if (_isrolling)
         {
             _timer += Time.deltaTime;
@@ -124,7 +123,6 @@ public class PlayerMove : MonoBehaviour
             }
 
 
-            Debug.Log("구르기");
             _rollDir = dir;
             _rollStartPos = _player.position;
 
@@ -158,12 +156,13 @@ public class PlayerMove : MonoBehaviour
         }
 
 
-
-
     }
 
 
-
+    public void AddMoveSpeed(float amount)
+    {
+        _speed += amount;
+    }
 
 
 }

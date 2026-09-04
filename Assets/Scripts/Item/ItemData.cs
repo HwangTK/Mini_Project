@@ -15,6 +15,10 @@ public class ItemData : ScriptableObject
     public int healthUp;
     public int manaUp;
     public int manaRegenUp;
+    public int healthRegenUp;
+
+    public float healthRegenTimer;
+
 
     public int attackUp;
 
