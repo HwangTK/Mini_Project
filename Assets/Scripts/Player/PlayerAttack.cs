@@ -48,5 +48,11 @@ public class PlayerAttack : MonoBehaviour
     }
 
 
+    public void ChangeWeapon(WeaponBase weapon)
+    {
+        _currentWeapon = weapon;
+    }
+
+
 
 }

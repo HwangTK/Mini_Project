@@ -20,8 +20,9 @@ public class ItemInfoUI : MonoBehaviour
     [SerializeField] private PlayerHealth _playerHealth;
     [SerializeField] private PlayerMana _playerMana;
     [SerializeField] private Sword _sword;
+    [SerializeField] private Gun _gun;
     [SerializeField] private PlayerMove _playerMove;
-
+    [SerializeField] private PlayerSkill _playerSkill;
 
     [Header("인벤토리")]
     [SerializeField] private Inventory _inventory;
@@ -34,6 +35,10 @@ public class ItemInfoUI : MonoBehaviour
 
     [Header("제작패널")]
     [SerializeField] private GameObject _craftPanel;
+
+    [Header("플레이어 무기")]
+    [SerializeField] private GameObject _swordObject;
+    [SerializeField] private GameObject _gunObject;
 
 
 
@@ -91,6 +96,24 @@ public class ItemInfoUI : MonoBehaviour
             return;
         }
 
+        if (_selectedItem.changeWeapon == ItemData.WeaponType.Gun)
+        {
+            _playerAttack.ChangeWeapon(_gun);
+
+            _swordObject.SetActive(false);
+            _gunObject.SetActive(true);
+        }
+
+        if (_selectedItem.changeWeapon == ItemData.WeaponType.Sword)
+        {
+            _playerAttack.ChangeWeapon(_sword);
+
+            _swordObject.SetActive(true);
+            _gunObject.SetActive(false);
+        }
+
+
+
         _playerAttack.AddDamage(_selectedItem.attackUp);
         _playerHealth.AddMaxHp(_selectedItem.healthUp);
         _playerMana.AddMaxMana(_selectedItem.manaUp);
@@ -99,6 +122,7 @@ public class ItemInfoUI : MonoBehaviour
         _playerMove.AddMoveSpeed(_selectedItem.moveSpeedUp);
         _playerHealth.AddHealthRegen(_selectedItem.healthRegenUp);
         _playerHealth.AddHealthRegenTime(_selectedItem.healthRegenTimer);
+        _playerSkill.AddSkillDamage(_selectedItem.skillDamageUp);
         _inventory.RemoveItem(_selectedItem);
 
 

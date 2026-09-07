@@ -19,15 +19,21 @@ public class ItemData : ScriptableObject
 
     public float healthRegenTimer;
 
-
     public int attackUp;
+    public int skillDamageUp;
 
     public float attackDelayDecrease;
     public float moveSpeedUp;
 
 
+    public enum WeaponType
+    {
+        None,
+        Sword,
+        Gun
+    }
 
-
+    public WeaponType changeWeapon;
 
 
 

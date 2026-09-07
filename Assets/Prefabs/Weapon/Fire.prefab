@@ -66,10 +66,88 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d96f7f92efbb7444cb4e4c26c1b88a97, type: 2}
     - target: {fileID: 919132149155446097, guid: 962fb1e145d956c4ca00144bb87014b8, type: 3}
       propertyPath: m_Name
-      value: Meshy_AI_Infernal_Ember_0904093826_texture
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 962fb1e145d956c4ca00144bb87014b8, type: 3}
+      propertyPath: m_TagString
+      value: PlayerAttack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 962fb1e145d956c4ca00144bb87014b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5692385333948995528}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 962fb1e145d956c4ca00144bb87014b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3882799941311162738}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 962fb1e145d956c4ca00144bb87014b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6997864059508665147}
   m_SourcePrefab: {fileID: 100100000, guid: 962fb1e145d956c4ca00144bb87014b8, type: 3}
+--- !u!1 &6050442677194955588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 962fb1e145d956c4ca00144bb87014b8, type: 3}
+  m_PrefabInstance: {fileID: 6860693480736073237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5692385333948995528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050442677194955588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b882a80658c40741b33d89a15967e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &-3882799941311162738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050442677194955588}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.011262062, y: 0.0062799724, z: 0.019051332}
+  m_Center: {x: -0.000021130085, y: 0.000048915168, z: -0.00013268506}
+--- !u!54 &6997864059508665147
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050442677194955588}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

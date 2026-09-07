@@ -42,7 +42,6 @@ public class MonsterHealth : MonoBehaviour
     public void MonsterHit(int damage)
     {
         _hp -= damage;
-
         StartCoroutine(HitEffect());
 
         if (!_monsterBehaviour.IsAttacking)
