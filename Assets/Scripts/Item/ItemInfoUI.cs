@@ -118,7 +118,7 @@ public class ItemInfoUI : MonoBehaviour
         _playerHealth.AddMaxHp(_selectedItem.healthUp);
         _playerMana.AddMaxMana(_selectedItem.manaUp);
         _playerMana.AddManaRegen(_selectedItem.manaRegenUp);
-        _sword.DecreaseAttackDelay(_selectedItem.attackDelayDecrease);
+        _playerAttack.AddAttackSpeed(_selectedItem.attackSpeedUp);
         _playerMove.AddMoveSpeed(_selectedItem.moveSpeedUp);
         _playerHealth.AddHealthRegen(_selectedItem.healthRegenUp);
         _playerHealth.AddHealthRegenTime(_selectedItem.healthRegenTimer);

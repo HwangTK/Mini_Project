@@ -10,9 +10,15 @@ public class Gun : WeaponBase
     [Header("발사 지점")]
     [SerializeField] private Transform _firePoint;
 
+    [Header("플레이어 스크립트")]
     [SerializeField] private PlayerAttack _playerAttack;
+    [SerializeField] private PlayerMove _playerMove;
 
-    [SerializeField] private float _attackDelay = 0.2f;
+    [Header("플레이어 애니메이터")]
+    [SerializeField] private Animator _animator;
+
+    [SerializeField] private float _attackSpeedMultiplier = 5f;
+    [SerializeField] private float _damageMultiplier = 0.5f;
 
     private float _attackTimer;
 
@@ -33,13 +39,26 @@ public class Gun : WeaponBase
             return;
         }
 
-        _attackTimer = _attackDelay;
+        float finalAttackSpeed = _playerAttack.AttackSpeed * _attackSpeedMultiplier;
+        float finalAttackDelay = 1f / finalAttackSpeed;
 
+        _attackTimer = finalAttackDelay;
+
+        if (_playerMove.IsMoving)
+        {
+            _animator.SetTrigger("GunShot");
+        }
+        else
+        {
+            _animator.SetTrigger("GunFull");
+        }
 
         GameObject bullet = Instantiate(_bulletPrefab, _firePoint.position, _firePoint.rotation);
 
         BulletShoot bulletShoot = bullet.GetComponent<BulletShoot>();
 
-        bulletShoot.SetDamage(_playerAttack.Damage);
+        int finalDamage = Mathf.RoundToInt(_playerAttack.Damage * _damageMultiplier);
+
+        bulletShoot.SetDamage(finalDamage);
     }
 }

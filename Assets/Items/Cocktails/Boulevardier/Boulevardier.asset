@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0824eff94a4c2cb4cb2e7ae11992be78, type: 3}
+  m_Name: Boulevardier
+  m_EditorClassIdentifier: 
+  itemName: Boulevardier
+  icon: {fileID: 21300000, guid: 7a60d2292754abc4e8888c6537a523f7, type: 3}
+  description: "\uBC84\uBC88\uC704\uC2A4\uD0A4 1oz\n\uCE84\uD30C\uB9AC 1oz\n\uC2A4\uC704\uD2B8\uBCA0\uB974\uBB34\uD2B8
+    1oz\n\n\uBB34\uAE30\uB97C \uCE7C\uB85C \uBCC0\uACBD\n\uACF5\uACA9\uB825 + 20"
+  healthUp: 0
+  manaUp: 0
+  manaRegenUp: 0
+  healthRegenUp: 0
+  healthRegenTimer: 0
+  attackUp: 20
+  skillDamageUp: 0
+  attackDelayDecrease: 0
+  moveSpeedUp: 0
+  changeWeapon: 1

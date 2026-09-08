@@ -13,7 +13,9 @@ public class Sword : WeaponBase
     [Header("발사지점")]
     [SerializeField] private Transform _firePoint;
 
-    [SerializeField] private float _attackDelay = 1.5f;
+
+    [SerializeField] private float _attackSpeedMultiplier = 0.7f;
+    [SerializeField] private float _damageMultiplier = 1.5f;
 
     [SerializeField] private PlayerMove _playerMove;
 
@@ -39,7 +41,10 @@ public class Sword : WeaponBase
             return;
         }
 
-        _attackTimer = _attackDelay;
+        float finalAttackSpeed = _playerAttack.AttackSpeed * _attackSpeedMultiplier;
+        float finalAttackDelay = 1f / finalAttackSpeed;
+
+        _attackTimer = finalAttackDelay;
 
         if (_playerMove.IsMoving)
         {
@@ -61,15 +66,12 @@ public class Sword : WeaponBase
 
         swordshoot.SetDirection(_firePoint.forward);
 
-        swordshoot.SetDamage(_playerAttack.Damage);
+        int finalDamage = Mathf.RoundToInt(_playerAttack.Damage * _damageMultiplier);
+
+        swordshoot.SetDamage(finalDamage);
 
 
     }
 
-
-    public void DecreaseAttackDelay(float amount)
-    {
-        _attackDelay -= amount;
-    }
 
 }

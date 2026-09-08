@@ -22,7 +22,7 @@ public class ItemData : ScriptableObject
     public int attackUp;
     public int skillDamageUp;
 
-    public float attackDelayDecrease;
+    public float attackSpeedUp;
     public float moveSpeedUp;
 
 

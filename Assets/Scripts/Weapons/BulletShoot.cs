@@ -30,6 +30,7 @@ public class BulletShoot : MonoBehaviour
             if (monsterHealth != null)
             {
                 monsterHealth.MonsterHit(_damage);
+                Debug.Log(_damage);
             }
 
             Destroy(gameObject);
