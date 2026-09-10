@@ -19,6 +19,10 @@ MonoBehaviour:
   healthUp: 0
   manaUp: 0
   manaRegenUp: 0
+  healthRegenUp: 0
+  healthRegenTimer: 0
   attackUp: 0
-  attackDelayDecrease: 0.1
+  skillDamageUp: 0
+  attackSpeedUp: 0.1
   moveSpeedUp: 0
+  changeWeapon: 0

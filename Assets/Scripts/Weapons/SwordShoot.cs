@@ -40,12 +40,20 @@ public class SwordShoot : MonoBehaviour
             Debug.Log("ÇÇ°Ý");
 
             MonsterHealth monsterHealth = other.GetComponent<MonsterHealth>();
+            MonsterRobotHealth robotHealth = other.GetComponent<MonsterRobotHealth>();
 
-            if(monsterHealth != null )
+            if (monsterHealth != null )
             {
                 monsterHealth.MonsterHit(_damage);
                 Debug.Log(_damage);
             }
+
+            if(robotHealth != null)
+            {
+                robotHealth.MonsterHit(_damage);
+                Debug.Log(_damage);
+            }
+
 
             Destroy(gameObject);
         }

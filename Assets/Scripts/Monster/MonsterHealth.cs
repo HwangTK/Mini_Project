@@ -20,7 +20,7 @@ public class MonsterHealth : MonoBehaviour
     [SerializeField] private GameObject[] _dropItems;
 
     [Header("µå¶ø È®·ü")]
-    [SerializeField] private float _dropPercent = 1.0f;
+    [SerializeField] private float[] _dropPercent;
 
 
 
@@ -53,9 +53,12 @@ public class MonsterHealth : MonoBehaviour
 
         if ( _hp <= 0)
         {
-            if (Random.value <= _dropPercent)
+            for (int i = 0; i < _dropItems.Length; i++)
             {
-                Instantiate(_dropItems[0], transform.position, transform.rotation);
+                if (Random.value <= _dropPercent[i])
+                {
+                    Instantiate(_dropItems[i], transform.position, transform.rotation);
+                }
             }
 
             Destroy(gameObject);

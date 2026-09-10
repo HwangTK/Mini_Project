@@ -15,14 +15,14 @@ MonoBehaviour:
   itemName: KahluaMilk
   icon: {fileID: 21300000, guid: b2f2bbde3d5fd1c40b809d68e5613cbb, type: 3}
   description: "\uCE7C\uB8E8\uC544 0.5oz\n\uC6B0\uC720 1.5oz\n\n\uBB34\uAE30\uB97C
-    \uCD1D\uC73C\uB85C \uAD50\uCCB4"
+    \uCD1D\uC73C\uB85C \uAD50\uCCB4\n\uACF5\uACA9\uB825 +5"
   healthUp: 0
   manaUp: 0
   manaRegenUp: 0
   healthRegenUp: 0
   healthRegenTimer: 0
-  attackUp: 0
+  attackUp: 5
   skillDamageUp: 0
-  attackDelayDecrease: 0
+  attackSpeedUp: 0
   moveSpeedUp: 0
   changeWeapon: 2

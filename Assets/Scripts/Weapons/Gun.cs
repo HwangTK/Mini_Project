@@ -17,8 +17,8 @@ public class Gun : WeaponBase
     [Header("플레이어 애니메이터")]
     [SerializeField] private Animator _animator;
 
-    [SerializeField] private float _attackSpeedMultiplier = 5f;
-    [SerializeField] private float _damageMultiplier = 0.5f;
+    [SerializeField] private float _attackSpeedMultiplier = 3f;
+    [SerializeField] private float _damageMultiplier = 0.3f;
 
     private float _attackTimer;
 

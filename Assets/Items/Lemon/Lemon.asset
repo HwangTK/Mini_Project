@@ -23,6 +23,6 @@ MonoBehaviour:
   healthRegenTimer: 0
   attackUp: 0
   skillDamageUp: 0
-  attackDelayDecrease: 0
+  attackSpeedUp: 0
   moveSpeedUp: 0
-  changeWeapon: 1
+  changeWeapon: 0
