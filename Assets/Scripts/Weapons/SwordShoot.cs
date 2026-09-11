@@ -34,10 +34,10 @@ public class SwordShoot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("충돌");
+        
         if (other.CompareTag("Monster"))
         {
-            Debug.Log("피격");
+            
 
             MonsterHealth monsterHealth = other.GetComponent<MonsterHealth>();
             MonsterRobotHealth robotHealth = other.GetComponent<MonsterRobotHealth>();

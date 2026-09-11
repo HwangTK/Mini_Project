@@ -48,7 +48,7 @@ public class MonsterRobotHealth : MonoBehaviour
             {
                 if (Random.value <= _dropPercent[i])
                 {
-                    Instantiate(_dropItems[i], transform.position, transform.rotation);
+                    Instantiate(_dropItems[i], transform.position + Vector3.up * 0.5f, transform.rotation);
                 }
             }
 

@@ -22,13 +22,16 @@ public class Gun : WeaponBase
 
     private float _attackTimer;
 
+   
 
     private void Update()
     {
+
         if (_attackTimer > 0f)
         {
             _attackTimer -= Time.deltaTime;
         }
+
     }
 
 

@@ -26,10 +26,17 @@ public class BulletShoot : MonoBehaviour
         if (other.CompareTag("Monster"))
         {
             MonsterHealth monsterHealth = other.GetComponent<MonsterHealth>();
+            MonsterRobotHealth robotHealth = other.GetComponent<MonsterRobotHealth>();
 
             if (monsterHealth != null)
             {
                 monsterHealth.MonsterHit(_damage);
+                Debug.Log(_damage);
+            }
+
+            if (robotHealth != null)
+            {
+                robotHealth.MonsterHit(_damage);
                 Debug.Log(_damage);
             }
 

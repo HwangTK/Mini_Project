@@ -18,6 +18,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private int _healthRegen = 5;
     [SerializeField] private float _regenTimer = 10f;
 
+
+    [SerializeField] private GameObject _gameOverPanel;
+
     private float _timer = 0f;
 
 
@@ -47,6 +50,9 @@ public class PlayerHealth : MonoBehaviour
         {
             _playerHP = 0;
             Debug.Log("플레이어사망");
+
+            _gameOverPanel.SetActive(true);
+            Time.timeScale = 0f;
         }
 
         _hpSlider.value = _playerHP;

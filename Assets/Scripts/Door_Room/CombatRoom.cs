@@ -16,6 +16,8 @@ public class CombatRoom : MonoBehaviour
 
     void Start()
     {
+        _monstersParent.SetActive(false);
+
         for (int i = 0; i < _doors.Length; i++)
         {
             _doors[i].SetActive(false);
