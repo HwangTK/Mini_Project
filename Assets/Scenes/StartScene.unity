@@ -407,7 +407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &392961917
 RectTransform:
   m_ObjectHideFlags: 0
@@ -945,7 +945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &809032601
 RectTransform:
   m_ObjectHideFlags: 0
@@ -962,8 +962,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 78.6}
-  m_SizeDelta: {x: 523.5, y: 100.5}
+  m_AnchoredPosition: {x: 0, y: 265.8}
+  m_SizeDelta: {x: 834.9, y: 100.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &809032602
 MonoBehaviour:
@@ -987,7 +987,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uB178\uB780\uBB38 : \uC544\uC774\uD15C \uBC29\n\n\uD30C\uB780 \uBB38
     : \uC804\uD22C\uBC29\n\n\uC740\uC0C9 \uBC29 : \uB2E4\uC74C\uCE35(\uAC8C\uC784
-    \uB05D)"
+    \uB05D)\n\n\n\uAD6C\uD604\uB41C \uB808\uC2DC\uD53C : \uBE14\uB799 \uB7EC\uC2DC\uC548,
+    \uBD88\uBC14\uB514\uC5D0, \n\uCE74\uCE74\uC624\uD53C\uC988, \uD504\uB80C\uCE58\uCEE4\uB125\uC158,
+    \uAC13\uD30C\uB354, \uAC13\uB9C8\uB354,\n\uCE7C\uB8E8\uC544\uBC00\uD06C, \uBAA8\uD788\uB610,
+    \uB124\uADF8\uB85C\uB2C8\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b680b35029bf5104d9e1181887f81c6c, type: 2}
   m_sharedMaterial: {fileID: -4974828807769034618, guid: b680b35029bf5104d9e1181887f81c6c, type: 2}
